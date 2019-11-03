@@ -25,7 +25,7 @@ SECRET_KEY = '!*jwi1g!c3%n4(92o=(68zqai5*tqw92#20)=43q0g4=#lwvy&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['praveshishere.pythonanywhere.com']
 
 
 # Application definition
@@ -52,6 +52,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Carnival_Website.urls'
 
+TEMPLATE_DIRS = (
+    '/home/Praveshishere/Robo_Carnival' + '/templates/',
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -67,6 +71,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'Carnival_Website.wsgi.application'
 
@@ -119,3 +125,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/Praveshishere/Robo_Carnival/main_site/static'
